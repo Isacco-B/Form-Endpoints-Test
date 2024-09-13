@@ -30,6 +30,7 @@ function startServer() {
   app.use(helmet());
   app.use(cors(corsOptions));
   app.use(express.urlencoded({ extended: true }));
+  app.use(express.static("public"));
 
   app.set("view engine", "ejs");
   app.set("views", path.join(__dirname, "views"));
@@ -120,9 +121,16 @@ function startServer() {
   app.use((err, req, res, next) => {
     const statusCode = err.statusCode || 500;
     const message = err.message || "Internal Server Error";
-    res
-      .status(statusCode)
-      .json({ success: false, statusCode, message, isError: true });
+    if (isJsonRequest(req)) {
+      return res
+        .status(statusCode)
+        .json({ success: false, statusCode, message, isError: true });
+    }
+
+    res.status(statusCode).render("error", {
+      origin: req.headers.origin,
+      error: message,
+    });
   });
 
   app.listen(PORT, () => {
