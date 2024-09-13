@@ -28,6 +28,7 @@ function startServer() {
   const app = express();
 
   app.use(helmet());
+  app.use(cors(corsOptions));
   app.use(express.urlencoded({ extended: true }));
 
   app.set("view engine", "ejs");
@@ -106,8 +107,6 @@ function startServer() {
       });
     }
   });
-
-  app.use(cors(corsOptions));
 
   app.all("*", (req, res) => {
     res.status(404);
