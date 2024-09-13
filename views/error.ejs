@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Something Went Wrong</title>
+    <style>
+      body {
+        background-color: #f8f9fa;
+        font-family: "Work Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+      }
+      h1 {
+        color: black;
+        font-size: 36px;
+        font-weight: 900;
+      }
+      p {
+        color: black;
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      div {
+        margin: auto;
+        margin-top: 100px;
+        background-color: #f2f2f2;
+        padding: 36px;
+        border-radius: 5px;
+        max-width: 650px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Something Went Wrong!</h1>
+      <p>
+        An error occurred while submitting the form. Return to original site:
+        <a href="<%= origin %>"><%= origin %></a>
+      </p>
+    </div>
+  </body>
+</html>
