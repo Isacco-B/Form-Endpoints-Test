@@ -198,6 +198,14 @@
 </div>
 
 
+## Email Inbox
+
+<div>
+    <img src="./gitAsset/email.png">
+    <img src="./gitAsset/emailContent.png">
+</div>
+
+
 ## Getting Up and Running Locally
 
 
