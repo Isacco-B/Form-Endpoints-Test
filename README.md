@@ -1,6 +1,6 @@
 # Form Endpoints
 
-- Is a form backend, API and email service for HTML forms. It sends your site's form submission directly into your inbox.
+- It is a form backend, API, and email service for HTML forms. It sends your site's form submissions directly to your inbox.
 - License: MIT
 
 
@@ -15,7 +15,7 @@
 ## Form and style example.
 
 - You can use this example to get started.
-- Important: The form must be containg the name, email and message fields.
+- Important: The form must contain the name, email, and message fields.
 
 ```html
     <style>
@@ -105,7 +105,7 @@
     </form>
 ```
 
-- You can specify the success page redirect link by adding this:
+- By default, after submitting a form the user is shown the FormSubmit "Success" page. You can provide an alternative URL for "Success" page.
 
 ```html
     <input type="hidden" name="_next" value="https://example.com/thxpage">
@@ -118,7 +118,7 @@
 </div>
 
 
-### If you want to use the aler message intead of the getting redirected you can use the following code:
+### If you want to use an alert message instead of being redirected, you can use the following code:
 
 ```html
     <form id="contactForm">
